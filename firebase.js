@@ -20,7 +20,7 @@ function login(){
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then((user) => {
         console.log("Logeado");
-        location.replace("home.html");
+        location.replace("/home.html");
     }).catch((error) => {
         window.alert(error);
     })
@@ -29,7 +29,7 @@ function login(){
 
 function logout(){
     firebase.auth().signOut().then(() => {
-        location.replace("index.html");
+        location.replace("/index.html");
       }).catch((error) => {
         window.alert(error);
       });
