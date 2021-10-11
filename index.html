@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | To-Do App</title>
+    <link rel="icon" type="image/png" href="assets/web-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="./firebase.js"></script>
+  </head>
+  <body>
+    <div class="background-image">
+      <img src="assets/bg-desktop-dark.jpg" />
+    </div>
+    <div class="container">
+      <div class="new-todo">
+        <div class="email">
+          <form onsubmit="login()">
+            <input id="email" type="email" placeholder="EMAIL" />
+          </form>
+        </div>
+      </div>
+
+      <div class="new-todo">
+        <div class="email">
+          <form onsubmit="login()">
+            <input id="password" type="password" placeholder="PASSWORD" />
+          </form>
+        </div>
+      </div>
+        
+        <div class="login" onclick="login()">
+          <span>LOGIN</span>
+        </div>
+    </div>
+  </body>
+</html>
