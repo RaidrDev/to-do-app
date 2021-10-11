@@ -11,7 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var db = firebase.firestore();
-
+firebase.auth().useDeviceLanguage();
 
 function login(){
 
@@ -27,3 +27,10 @@ function login(){
     
 }
 
+function logout(){
+    firebase.auth().signOut().then(() => {
+        location.replace("index.html");
+      }).catch((error) => {
+        window.alert(error);
+      });
+}

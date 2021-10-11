@@ -232,6 +232,11 @@ body {
     letter-spacing: 5px;
 }
 
+.logout{
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+}
 
 
 
