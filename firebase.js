@@ -11,7 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var db = firebase.firestore();
-const auth = firebase.auth();
+
 
 function login(){
 
@@ -26,3 +26,4 @@ function login(){
     })
     
 }
+
