@@ -29,7 +29,7 @@ function login(){
 
 function logout(){
     firebase.auth().signOut().then(() => {
-        location.replace("/index.html");
+        
       }).catch((error) => {
         window.alert(error);
       });
