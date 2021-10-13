@@ -232,6 +232,25 @@ body {
     letter-spacing: 5px;
 }
 
+.signup {
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    cursor: pointer;
+    transition: all .25s ease;
+    transition-property: box-shadow, transform, border-color;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.signup span{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
 .logout{
     display: flex;
     margin-top: 20px;

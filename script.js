@@ -1,15 +1,29 @@
 
+var userEmail = null
+
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        userEmail = user.email;
+        getItems();
+    } 
+    
+});
+
+
 function getItems(){
-    db.collection("todo-items").onSnapshot((snapshot) => {
+    db.collection("todo-items").where("correo", "==", userEmail).get().then((querySnapshot) => {
         let items = [];
-        snapshot.docs.forEach((doc) => {
+        querySnapshot.forEach((document) => {
             items.push({
-                id: doc.id, 
-                ...doc.data()
+                id: document.id, 
+                ...document.data()
             })
-        })
-        generateItems(items);
+            generateItems(items);
+        });
     })
+    .catch((error) => {
+        console.log(error);
+    });
 }
 
 function generateItems(items){
@@ -43,15 +57,17 @@ function generateItems(items){
 }
 
 
-
 function addItem(event){
     event.preventDefault();
     let text = document.getElementById("todo-input");
     let newItem = db.collection("todo-items").add({
         text: text.value,
-        status: "active"
+        status: "active",
+        correo: userEmail
     })
     text.value = "";
+    
+    getItems();
 }
 
 function markCompleted(id){
@@ -82,5 +98,7 @@ function deleteCompleted(){
     });
 }
 
+function editText(){
+}
 
-getItems();
+

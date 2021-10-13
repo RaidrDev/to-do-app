@@ -13,24 +13,40 @@ firebase.analytics();
 var db = firebase.firestore();
 firebase.auth().useDeviceLanguage();
 
-function login(){
+
+function signup(event) {
+    event.preventDefault();
+    const userEmail = document.getElementById("email").value;
+    const userPassword = document.getElementById("password").value;
+
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).then((userCredential) => {
+        location.replace("/home.html");
+    }).catch((error) => {
+        window.alert(error);
+    });
+}
+
+
+function login(event) {
+    event.preventDefault();
 
     const userEmail = document.getElementById("email").value;
     const userPassword = document.getElementById("password").value;
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).then((user) => {
-        console.log("Logeado");
         location.replace("/home.html");
     }).catch((error) => {
         window.alert(error);
     })
-    
+
 }
 
-function logout(){
+function logout() {
     firebase.auth().signOut().then(() => {
-        
-      }).catch((error) => {
+
+    }).catch((error) => {
         window.alert(error);
-      });
+    });
 }
+
+
