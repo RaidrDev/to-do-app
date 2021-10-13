@@ -85,6 +85,8 @@ function markCompleted(id){
             }
         }
     })
+
+    setTimeout(() => {  getItems(); }, 150);
 }
 
 function deleteCompleted(){
@@ -96,9 +98,15 @@ function deleteCompleted(){
     .catch((error) => {
         console.log("Error getting documents: ", error);
     });
+    getItems();
+    console.log("Hola")
+
+    setTimeout(() => {  getItems(); }, 200);
 }
 
 function editText(){
+
 }
+
 
 
