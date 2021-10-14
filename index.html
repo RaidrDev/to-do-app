@@ -13,6 +13,15 @@
   <script src="https://www.gstatic.com/firebase/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
   <script src="./firebase.js"></script>
+  <script>
+    firebase.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        // User is signed out
+        console.log("No hay usuario logeado");
+        location.replace("/");
+      }
+    });
+  </script>
 </head>
 
 <body>
