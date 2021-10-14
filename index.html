@@ -15,10 +15,9 @@
   <script src="./firebase.js"></script>
   <script>
     firebase.auth().onAuthStateChanged((user) => {
-      if (!user) {
+      if (user) {
         // User is signed out
-        console.log("No hay usuario logeado");
-        location.replace("/");
+        location.replace("/home.html");
       }
     });
   </script>
