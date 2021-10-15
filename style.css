@@ -48,6 +48,7 @@ body {
     font-weight: bold;
 }
 
+
 .new-todo {
     width: 100%;
     height: 70px;
@@ -255,11 +256,66 @@ body {
     display: flex;
     margin-top: 20px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
 }
 
 
+@media screen and (max-width: 768px) {
 
+    .theme{
+        display: none;
+    }
 
+    .header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .new-todo {
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+
+    .check{
+        flex-basis: 50px;
+    }
+
+    .todo-items-wrapper {
+        margin-left: 0px;
+    }
+
+    .new-todo-input input{
+        font-size: 15px;
+    }
+
+    .todo-item{
+        height: 80px;
+    }
+
+    .todo-items-info {
+        font-size: 13px;
+    }
+
+    .items-left{
+        display: none;
+    }
+
+    .todo-text{
+        font-size: 13px;
+    }
+
+    .check {
+        margin-left: 5px;
+    }
+
+    .logout {
+        margin-bottom: 15px;
+    }
+}
 
 
 

@@ -86,7 +86,7 @@ function markCompleted(id){
         }
     })
 
-    setTimeout(() => {  getItems(); }, 150);
+    setTimeout(() => {  getItems(); }, 250);
 }
 
 function deleteCompleted(){
@@ -101,7 +101,7 @@ function deleteCompleted(){
     getItems();
     console.log("Hola")
 
-    setTimeout(() => {  getItems(); }, 200);
+    setTimeout(() => {  getItems(); }, 300);
 }
 
 function editText(){
