@@ -91,7 +91,6 @@ function markCompleted(id){
     setTimeout(() => {  getItems(); }, 350);
     setTimeout(() => {  getItems(); }, 500);
     setTimeout(() => {  getItems(); }, 1000);
-    setTimeout(() => {  getItems(); }, 1500);
 }
 
 function deleteCompleted(){
@@ -112,7 +111,6 @@ function deleteCompleted(){
     setTimeout(() => {  getItems(); }, 350);
     setTimeout(() => {  getItems(); }, 500);
     setTimeout(() => {  getItems(); }, 1000);
-    setTimeout(() => {  getItems(); }, 1500);
 }
 
 function editText(){
