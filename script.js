@@ -85,8 +85,11 @@ function markCompleted(id){
             }
         }
     })
-
+    setTimeout(() => {  getItems(); }, 100);
+    setTimeout(() => {  getItems(); }, 150);
     setTimeout(() => {  getItems(); }, 250);
+    setTimeout(() => {  getItems(); }, 350);
+    setTimeout(() => {  getItems(); }, 500);
 }
 
 function deleteCompleted(){
@@ -98,10 +101,14 @@ function deleteCompleted(){
     .catch((error) => {
         console.log("Error getting documents: ", error);
     });
-    getItems();
-    console.log("Hola")
 
+    getItems();
+    setTimeout(() => {  getItems(); }, 100);
+    setTimeout(() => {  getItems(); }, 150);
+    setTimeout(() => {  getItems(); }, 250);
     setTimeout(() => {  getItems(); }, 300);
+    setTimeout(() => {  getItems(); }, 350);
+    setTimeout(() => {  getItems(); }, 500);
 }
 
 function editText(){
