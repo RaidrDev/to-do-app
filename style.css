@@ -222,6 +222,8 @@ body {
     user-select: none;
 }
 
+
+
 .todo-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
